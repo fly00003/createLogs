@@ -1,6 +1,8 @@
 package com.liuhengfei.beans;
 
+import lombok.Data;
 
+@Data
 public class Basebean {
     protected String mid; // (String) 设备唯一标识
     protected String uid; // (String) 用户uid

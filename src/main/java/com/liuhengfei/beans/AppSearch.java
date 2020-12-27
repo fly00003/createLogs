@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class AppSearch extends Basebean {
+public class AppSearch {
     protected int id;
     protected int user_id;
     protected String content;

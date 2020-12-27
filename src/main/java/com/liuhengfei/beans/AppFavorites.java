@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class AppFavorites extends Basebean {
+public class AppFavorites{
     protected int id;//主键
     protected int course_id;//商品id
     protected int userid;//用户ID

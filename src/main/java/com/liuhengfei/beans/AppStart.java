@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class AppStart extends Basebean {
+public class AppStart {
     protected String entry;//入口： push=1，widget=2，icon=3，notification=4, lockscreen_widget =5
     protected String open_ad_type;//开屏广告类型:  开屏原生广告=1, 开屏插屏广告=2
     protected String action;//状态：成功=1  失败=2

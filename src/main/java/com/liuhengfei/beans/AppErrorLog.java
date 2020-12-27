@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class AppErrorLog extends Basebean{
+public class AppErrorLog{
 
     protected String errorBrief;    //错误摘要
     protected String errorDetail;   //错误详情

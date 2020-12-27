@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class AppComment extends Basebean {
+public class AppComment{
 
     protected int comment_id;//评论表
     protected int userid;//用户id

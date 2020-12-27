@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class AppPraise extends Basebean{
+public class AppPraise{
     protected int id; //主键id
     protected int userid;//用户id
     protected int target_id;//点赞的对象id
