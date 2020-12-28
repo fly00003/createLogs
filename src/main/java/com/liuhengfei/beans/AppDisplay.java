@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class AppDisplay{
+public class AppDisplay implements EnvIn {
     protected String action;//动作：曝光=1，点击=2，
     protected String goodsid;//商品ID（服务端下发的ID）
     protected String place;//顺序（第几条商品，第一条为0，第二条为1，如此类推）

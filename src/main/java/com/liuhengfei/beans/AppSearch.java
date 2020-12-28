@@ -8,9 +8,9 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class AppSearch {
+public class AppSearch implements EnvIn{
     protected int id;
-    protected int user_id;
+    //protected int user_id;
     protected String content;
     protected String add_time;
 }

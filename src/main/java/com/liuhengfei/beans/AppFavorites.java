@@ -8,9 +8,9 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class AppFavorites{
+public class AppFavorites implements EnvIn{
     protected int id;//主键
-    protected int course_id;//商品id
-    protected int userid;//用户ID
+    protected int res_id;//商品id
+    //protected int userid;//用户ID
     protected String add_time;//创建时间
 }

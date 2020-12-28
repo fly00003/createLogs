@@ -1,5 +1,6 @@
 package com.liuhengfei.driver;
 
+import com.liuhengfei.beans.AppSearch;
 import com.liuhengfei.pojo.Knowledge;
 import com.liuhengfei.pojo.KnowledgeMapper;
 import org.apache.ibatis.io.Resources;
@@ -14,10 +15,13 @@ import java.util.List;
 
 public class MyTest {
     public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(AppSearchDriver.getInstance().envLog(1));
+        }
 
     }
     @Test
-    public void selectUser() throws IOException {
+    public void selectKnowledge() throws IOException {
 
         String resource = "config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);

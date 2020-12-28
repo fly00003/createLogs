@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class AppNewsDetail{
+public class AppNewsDetail implements EnvIn {
 
     protected String entry;//页面入口来源：应用首页=1、push=2、详情页相关推荐=3
     protected String action;//动作：开始加载=1，加载成功=2（pv），加载失败=3, 退出页面=4

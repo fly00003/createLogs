@@ -1,13 +1,29 @@
 package com.liuhengfei.driver;
 
+import com.alibaba.fastjson.JSON;
 import com.liuhengfei.beans.Basebean;
+import com.liuhengfei.beans.EnvIn;
 
 import java.util.Random;
 
-public class BasebeanDriver {
-    private static Random rand = new Random();
+public abstract class BasebeanDriver {
+    protected static Random rand = new Random();
     protected Basebean basebean = new Basebean();
-    private Basebean produceBaseinfo(int id)
+    // 商品id
+    protected static int s_goodsid = 0;
+    //点赞数
+    protected int praiseNum = 5000;
+    //收藏数
+    protected int favorNum = 1000;
+    //评论数
+    protected int commentNum = 500;
+    //查找数
+    protected int searchNum = 300;
+    //全部用户数
+    protected int allUserNum = 100000;
+    //全部资源数量
+    protected int allResNum = 30000;
+    protected Basebean produceBaseinfo(int id)
     {
 
         if (id<100000)
@@ -169,5 +185,14 @@ public class BasebeanDriver {
 
         return str.toString();
     }
+    public String envLog(int id)
+    {
+        produceBaseinfo(id);
+        String basejson = JSON.toJSON(basebean).toString();
+        String evnJson = JSON.toJSON(generateBean()).toString();
+        String envlog = basejson.substring(0,basejson.length()-1)+",et:"+evnJson+"}";
+        return envlog;
+    }
 
+    protected abstract EnvIn generateBean();
 }

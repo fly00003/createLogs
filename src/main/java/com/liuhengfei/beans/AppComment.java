@@ -8,10 +8,10 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class AppComment{
+public class AppComment implements EnvIn {
 
     protected int comment_id;//评论表
-    protected int userid;//用户id
+    //protected int userid;//用户id
     protected  int p_comment_id;//父级评论id(为0则是一级评论,不为0则是回复)
     protected String content;//评论内容
     protected String addtime;//创建时间

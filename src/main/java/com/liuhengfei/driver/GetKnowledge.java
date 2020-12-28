@@ -12,17 +12,24 @@ import java.io.InputStream;
 import java.util.List;
 
 public class GetKnowledge {
-    private GetKnowledge(){};
-    private GetKnowledge instance;
-    public GetKnowledge getInstance()
-    {
+    private GetKnowledge() throws IOException {
+        knowledges=selectKnowledge();
+    };
+    private static GetKnowledge instance;
+    private static List<Knowledge> knowledges;
+
+    public  List<Knowledge> getKnowledges() {
+        return knowledges;
+    }
+
+    public static GetKnowledge getInstance() throws IOException {
         if (instance==null)
         {
             instance = new GetKnowledge();
         }
         return instance;
     }
-    public List<Knowledge> selectKnowledge() throws IOException {
+    private static List<Knowledge> selectKnowledge() throws IOException {
 
         String resource = "config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
